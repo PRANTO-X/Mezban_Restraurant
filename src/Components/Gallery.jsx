@@ -7,7 +7,7 @@ import 'swiper/css/pagination'
 
 const Gallery = () => {
   return (
-    <div id='Gallery' className='section-container'>
+    <div id='Gallery' className='section-container scroll-mt-16 sm:scroll-mt-24'>
         <div className="flex flex-col gap-3 justify-center items-center text-center  mb-10 md:mb-12">
             <img src={assets.heading_icon} alt="heading icon" loading='lazy'/>
             <h2 className='heading'>Photo Gallery</h2>
@@ -27,16 +27,16 @@ const Gallery = () => {
                     }}
             >
             <SwiperSlide className='w-full'>
-                    <img src={assets.gallarey_img_1} alt="gallery img" loading='lazy' className='w-full'/>
+                    <img src={assets.gallarey_img_1} alt="gallery img" loading='lazy' className='w-full transform transition duration-300 ease-in-out hover:scale-110'/>
             </SwiperSlide>
             <SwiperSlide className='w-full'>
-                    <img src={assets.gallarey_img_2} alt="gallery img" loading='lazy' className='w-full'/>
+                    <img src={assets.gallarey_img_2} alt="gallery img" loading='lazy' className='w-full transform transition duration-300 ease-in-out hover:scale-110'/>
             </SwiperSlide>
             <SwiperSlide className='w-full'>
-                    <img src={assets.gallarey_img_3} alt="gallery img" loading='lazy' className='w-full'/>
+                    <img src={assets.gallarey_img_3} alt="gallery img" loading='lazy' className='w-full transform transition duration-300 ease-in-out hover:scale-110'/>
             </SwiperSlide>
             <SwiperSlide className='w-full'>
-                    <img src={assets.gallarey_img_4} alt="gallery img" loading='lazy' className='w-full'/>
+                    <img src={assets.gallarey_img_4} alt="gallery img" loading='lazy' className='w-full transform transition duration-300 ease-in-out hover:scale-110'/>
             </SwiperSlide>
 
         </Swiper>

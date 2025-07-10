@@ -217,28 +217,32 @@ export const feedbacks = [
 
 export const Blogs = [
   {
-    text: "Eat Healthy Food & Get Your Happiness Expertise Chef.",
+    title: "Eat Healthy Food & Get Your Happiness Expertise Chef.",
     author: "By Admin",
     comments: 12,
     img: vlog_img_1,
+    date: "02 Jun,2025",
   },
   {
-    text: "Cooking Delicious Food Our Expertise Chef.",
+    title: "Cooking Delicious Food Our Expertise Chef.",
     author: "By Admin",
     comments: 12,
     img: vlog_img_2,
+    date: "05 Jun,2025",
   },
   {
-    text: "To Serve Food Customer With Coffee.",
+    title: "To Serve Food Customer With Coffee.",
     author: "By Admin",
     comments: 12,
     img: vlog_img_3,
+    date: "04 July,2025",
   },
   {
-    text: "Eat Healthy Food & Get Your Happiness",
+    title: "Eat Healthy Food & Get Your Happiness",
     author: "By Admin",
     comments: 12,
     img: vlog_img_4,
+    date: "06 July,2025",
   },
 ];
 

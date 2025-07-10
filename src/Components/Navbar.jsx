@@ -3,12 +3,17 @@ import { useState,useEffect } from 'react';
 import { assets } from '../assets/assets'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars,faXmark  } from '@fortawesome/free-solid-svg-icons';
+import useActiveSection from '../Hooks/useActiveSection';
 
 
 
 
 const Navbar = () => {
     const [showMobileMenu,setShowMobileMenu] = useState(false);
+      const activeSection = useActiveSection();
+
+  
+
 
     let handleMobileMenu = ()=>{
         setShowMobileMenu(prev=>!prev);
@@ -38,19 +43,19 @@ const Navbar = () => {
 
              <div className='hidden md:flex justify-between items-center gap-10 lg:gap-20 w-full mx-auto xl:w-auto'>
                 <ul className='space-x-8 md:space-x-5'>
-                    <a href="#Home" className='nav-link'>Home</a>
-                    <a href="#About" className='nav-link'>About</a>
-                    <a href="#Menu"  className='nav-link'>Menu</a>
-                    <a href="#Gallery" className='nav-link'>Gallery</a>
+                    <a href="#Home" className={`nav-link ${activeSection === 'Home' ? 'active' : ''}`}>Home</a>
+                    <a href="#About" className={`nav-link ${activeSection === 'About' ? 'active' : ''}`}>About</a>
+                    <a href="#Menu" className={`nav-link ${activeSection === 'Menu' ? 'active' : ''}`}>Menu</a>
+                    <a href="#Gallery" className={`nav-link ${activeSection === 'Gallery' ? 'active' : ''}`}>Gallery</a>
                 </ul>
 
                 <img src={assets.logo} alt="logo" loading='lazy'/>
 
                 <ul className='space-x-8 md:space-x-5'>
-                    <a href="#Team" className='nav-link'>Team</a>
-                    <a href="#Events" className='nav-link'>Events</a>
-                    <a href="#Blog" className='nav-link'>Blog</a>
-                    <a href="#Contact" className='nav-link'>Contact</a>
+                    <a href="#Team" className={`nav-link ${activeSection === 'Team' ? 'active' : ''}`}>Team</a>
+                    <a href="#Events" className={`nav-link ${activeSection === 'Events' ? 'active' : ''}`}>Events</a>
+                    <a href="#Blog" className={`nav-link ${activeSection === 'Blog' ? 'active' : ''}`}>Blog</a>
+                    <a href="#Contact" className={`nav-link ${activeSection === 'Contact' ? 'active' : ''}`}>Contact</a>
                 </ul>
              </div>
 
@@ -73,14 +78,14 @@ const Navbar = () => {
                 ${showMobileMenu ? '-translate-y-0' : '-translate-y-full'}`}>
 
                 <ul className='flex flex-col justify-center items-center gap-10 '>
-                    <a href="#Home" className='nav-link'>Home</a>
-                    <a href="#About" className='nav-link'>About</a>
-                    <a href="#Menu"  className='nav-link'>Menu</a>
-                    <a href="#Gallery" className='nav-link'>Gallery</a>
-                    <a href="#Team" className='nav-link'>Team</a>
-                    <a href="#Events" className='nav-link'>Events</a>
-                    <a href="#Blog" className='nav-link'>Blog</a>
-                    <a href="#Contact" className='nav-link'>Contact</a>
+                    <a onClick={handleMobileMenu} href="#Home" className={`nav-link ${activeSection === 'Home' ? 'active' : ''}`}>Home</a>
+                    <a onClick={handleMobileMenu} href="#About" className={`nav-link ${activeSection === 'About' ? 'active' : ''}`}>About</a>
+                    <a onClick={handleMobileMenu} href="#Menu" className={`nav-link ${activeSection === 'Menu' ? 'active' : ''}`}>Menu</a>
+                    <a onClick={handleMobileMenu} href="#Gallery" className={`nav-link ${activeSection === 'Gallery' ? 'active' : ''}`}>Gallery</a>
+                    <a onClick={handleMobileMenu} href="#Team" className={`nav-link ${activeSection === 'Team' ? 'active' : ''}`}>Team</a>
+                    <a onClick={handleMobileMenu} href="#Events" className={`nav-link ${activeSection === 'Events' ? 'active' : ''}`}>Events</a>
+                    <a onClick={handleMobileMenu} href="#Blog" className={`nav-link ${activeSection === 'Blog' ? 'active' : ''}`}>Blog</a>
+                    <a onClick={handleMobileMenu} href="#Contact" className={`nav-link ${activeSection === 'Contact' ? 'active' : ''}`}>Contact</a>
                 </ul>
             </div>
 

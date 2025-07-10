@@ -10,6 +10,8 @@ import Popular from "./Components/Popular"
 import Feedback from "./Components/Feedback"
 import Events from "./Components/Events"
 import Blog from "./Components/Blog"
+import Contact from "./Components/Contact"
+import Footer from "./Components/Footer"
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
      <Feedback/>
      <Events/>
      <Blog/>
+     <Contact/>
+     <Footer/>
     </>
   )
 }

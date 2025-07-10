@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const About = () => {
   return (
-    <div id='About' className='section-container'>
+    <div id='About' className='section-container lg:my-5 scroll-mt-16 sm:scroll-mt-24'>
         <div className="rounded-xl flex flex-col-reverse lg:flex-row lg:gap-8 items-center bg-bg-secondary relative overflow-hidden">
             
             <img src={assets.logo} alt="logo" loading="lazy" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-44 h-auto z-10 pointer-events-none opacity-80"/>

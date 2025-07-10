@@ -32,8 +32,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .title{
         @apply text-primary md:text-xl leading-relaxed;
     }
-    .nav-link{
+    .nav-link,
+    .footer-link
+    {
         @apply hover:text-primary transition duration-300 text-white  md:text-lg;
+    }
+
+    .nav-link.active{
+        @apply !text-primary ;
     }
     .btn{
         @apply bg-primary z-10 px-4 py-2 rounded-lg overflow-hidden text-white hover:text-primary  font-semibold relative transition duration-300 cursor-pointer;
@@ -70,8 +76,9 @@ input[type="time"]::-webkit-calendar-picker-indicator {
                 transform outline-2 outline-transparent hover:-translate-y-3 hover:outline-primary transition-all duration-300;
     }
 
-    .strength-card:hover img{
-        transform: rotateY(180deg);
+    .strength-card:hover img,
+    .contact-card:hover img{
+        transform: rotateY(360deg);
         transition: transform 0.5s ease;
     }
     .item-card::before{
@@ -95,5 +102,10 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         border-left: 20px solid transparent;
         border-right: 20px solid transparent;
         border-top: 13px solid white; 
+    }
+    .contact-card{
+        @apply lg:min-h-[400px] xl:min-h-auto w-full md:w-[45%] lg:w-[30%] bg-bg-secondary  border-2 border-transparent
+        flex flex-col  justify-center items-center text-center py-10 md:py-14 rounded-lg
+        transform transition duration-300 ease-in-out hover:-translate-y-2.5 hover:border-primary;
     }
 }

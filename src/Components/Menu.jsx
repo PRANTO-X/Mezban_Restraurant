@@ -3,7 +3,7 @@ import { assets,menu } from '../assets/assets'
 
 const Menu = () => {
   return (
-    <div id='Menu' className='section-container'>
+    <div id='Menu' className='section-container scroll-mt-16 sm:scroll-mt-24'>
         <div className="flex flex-col gap-3 justify-center items-center text-center mb-12 lg:mb-0">
             <img src={assets.heading_icon} alt="heading icon" loading='lazy'/>
             <h2 className='heading'>Checkout Our Menu</h2>
