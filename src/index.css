@@ -24,7 +24,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
 
 @layer components{
     .section-container{
-        @apply container mx-auto px-6 md:px-8 py-12;
+        @apply container mx-auto px-6 md:px-8 py-10;
     }
     .heading{
         @apply text-3xl md:text-4xl font-medium text-white tracking-wide;
@@ -33,7 +33,7 @@ input[type="time"]::-webkit-calendar-picker-indicator {
         @apply text-primary md:text-xl leading-relaxed;
     }
     .nav-link{
-        @apply hover:text-primary transition duration-300 text-white text-lg;
+        @apply hover:text-primary transition duration-300 text-white  md:text-lg;
     }
     .btn{
         @apply bg-primary z-10 px-4 py-2 rounded-lg overflow-hidden text-white hover:text-primary  font-semibold relative transition duration-300 cursor-pointer;
@@ -57,5 +57,43 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     .hero {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
                     url('./assets/home_img.png'); 
+    }
+    .swiper-pagination-bullet{
+        @apply !bg-gray-100;
+    }
+    .swiper-pagination-bullet-active {
+        background: var(--color-primary) !important; 
+    }
+
+    .strength-card{
+        @apply flex flex-col justify-center items-center gap-4 text-center bg-bg-secondary p-7 rounded-lg
+                transform outline-2 outline-transparent hover:-translate-y-3 hover:outline-primary transition-all duration-300;
+    }
+
+    .strength-card:hover img{
+        transform: rotateY(180deg);
+        transition: transform 0.5s ease;
+    }
+    .item-card::before{
+        content: '';
+        position: absolute;
+        background: var(--color-bg-secondary);
+        height: 100%;
+        width: 100%;
+        z-index: -10;
+        border-radius: 8px;
+        top: -70%;
+    }
+    .price-tag::after {
+        content: "";
+        position: absolute;
+        bottom: -13px; 
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 13px solid white; 
     }
 }

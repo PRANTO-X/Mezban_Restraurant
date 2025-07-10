@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 const Reserve = () => {
   return (
     <div className='section-container'>
-        <div className="flex flex-col gap-3 justify-center items-center text-center mb-12">
+        <div className="flex flex-col gap-3 justify-center items-center text-center  mb-10 md:mb-12">
             <img src={assets.heading_icon} alt="heading icon" loading='lazy'/>
             <h2 className='heading'>Reserve Your Table</h2>
             <p className='title'>Book a table in advance to enjoy your time with friends & family</p>

@@ -3,7 +3,7 @@ import Navbar from './Navbar'
 
 const Home = () => {
   return (
-    <div id='home' className='min-h-screen mb-4 bg-cover bg-center w-full overflow-hidden bg-fixed
+    <div id='Home' className='min-h-screen mb-4 bg-cover bg-center w-full overflow-hidden bg-fixed
                                 flex flex-col gap-5  justify-center items-center -z-10 hero'>  
         <Navbar/>
 

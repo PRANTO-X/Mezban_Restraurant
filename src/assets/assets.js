@@ -159,24 +159,28 @@ export const popularItems = [
     description: "Lorem Ipsum is simply dummy printing and typesetting.",
     rating: 5,
     img: biriyani_img,
+    price: "$25",
   },
   {
     name: "Grill",
     description: "Lorem Ipsum is simply dummy printing and typesetting.",
     rating: 4,
     img: grill_img,
+    price: "$35",
   },
   {
     name: "Thai Soup",
     description: "Lorem Ipsum is simply dummy printing and typesetting.",
     rating: 4,
     img: soup_img,
+    price: "$40",
   },
   {
     name: "Beaf Machal",
     description: "Lorem Ipsum is simply dummy printing and typesetting.",
     rating: 5,
     img: beaf_img,
+    price: "$50",
   },
 ];
 
@@ -211,7 +215,7 @@ export const feedbacks = [
   },
 ];
 
-export const vlogs = [
+export const Blogs = [
   {
     text: "Eat Healthy Food & Get Your Happiness Expertise Chef.",
     author: "By Admin",

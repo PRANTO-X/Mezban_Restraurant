@@ -27,7 +27,7 @@ const Navbar = () => {
 
   return (
     <header className='fixed top-0 left-0 right-0 bg-bg-secondary z-100'>
-        <nav className='container mx-auto px-6 md:px-8 py-4 flex justify-between items-center'>
+        <nav className='container mx-auto px-6 md:px-8 py-3 flex justify-between items-center'>
 
             <ul className='xl:flex gap-5 items-center hidden'>
                 <a href=""><img src={assets.Facebook} alt="facebook" loading='lazy' /></a>
@@ -65,18 +65,22 @@ const Navbar = () => {
             </div>
 
             <button onClick={handleMobileMenu} className='md:hidden z-100'>
-                <FontAwesomeIcon icon={showMobileMenu ? faXmark : faBars} className='text-3xl text-white' />
+                <FontAwesomeIcon icon={showMobileMenu ? faXmark : faBars} className='text-2xl md:text-3xl text-white' />
             </button>
 
             <div className={`md:hidden absolute top-full left-0 w-full min-h-screen bg-bg-secondary 
-                py-12 z-50 transition-transform duration-500 ease-in-out transform  overflow-hidden
+                py-10 z-50 transition-transform duration-500 ease-in-out transform  overflow-hidden
                 ${showMobileMenu ? '-translate-y-0' : '-translate-y-full'}`}>
 
-                <ul className='flex flex-col justify-center items-center gap-12 '>
+                <ul className='flex flex-col justify-center items-center gap-10 '>
                     <a href="#Home" className='nav-link'>Home</a>
                     <a href="#About" className='nav-link'>About</a>
                     <a href="#Menu"  className='nav-link'>Menu</a>
                     <a href="#Gallery" className='nav-link'>Gallery</a>
+                    <a href="#Team" className='nav-link'>Team</a>
+                    <a href="#Events" className='nav-link'>Events</a>
+                    <a href="#Blog" className='nav-link'>Blog</a>
+                    <a href="#Contact" className='nav-link'>Contact</a>
                 </ul>
             </div>
 
