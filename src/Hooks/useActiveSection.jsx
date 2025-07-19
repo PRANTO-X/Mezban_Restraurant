@@ -4,11 +4,13 @@ const useActiveSection = () => {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
-    const sections = document.querySelectorAll('[id]');
+    const isMobile = window.innerWidth <= 767; 
+
     const observerOptions = {
-      threshold: 0.6,
+      threshold: isMobile ? 0.2 : 0.6,
     };
 
+    const sections = document.querySelectorAll('[id]');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -17,14 +19,10 @@ const useActiveSection = () => {
       });
     }, observerOptions);
 
-    sections.forEach(section => {
-      observer.observe(section);
-    });
+    sections.forEach(section => observer.observe(section));
 
     return () => {
-      sections.forEach(section => {
-        observer.unobserve(section);
-      });
+      sections.forEach(section => observer.unobserve(section));
     };
   }, []);
 
